@@ -21,7 +21,7 @@ end
 desc 'Serve the site'
 task :serve do
   rake_running
-  jekyll('serve')
+  jekyll('serve --incremental')
 end
 
 desc 'Build the site for deployment'

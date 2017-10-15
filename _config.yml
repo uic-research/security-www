@@ -37,6 +37,7 @@ scholar:
   style: _includes/ieee.csl
   locale: en
   sort_by: year,month
+  group_order: descending
   order: descending
   source: _includes
   use_raw_bibtex_entry: true
