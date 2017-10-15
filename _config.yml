@@ -1,0 +1,45 @@
+title: "Security & Privacy at UIC"
+email: your-email@example.com
+description: "Security & Privacy group at the University of Illinois at Chicago"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://security.cs.uic.edui"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+liquid:
+  error_mode: strict
+
+kramdown:
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - "jekyll/scholar"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - vendor
+  - _deploy
+
+scholar:
+  style: _includes/ieee.csl
+  locale: en
+  sort_by: year,month
+  order: descending
+  source: _includes
+  use_raw_bibtex_entry: true
+  bibliography: security.bib
+
+# vim: set sw=2 sts=2 ts=8 expandtab:

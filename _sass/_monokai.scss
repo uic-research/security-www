@@ -1,0 +1,85 @@
+// Lightly modified Monokai
+
+.highlight {
+  $comment:        #75715e;
+  $keyword:        #66d9ef;
+  $literal-number: #ae81ff;
+  $literal-string: #e6db74;
+  $name:           #f8f8f2;
+  $name-class:     #a6e22e;
+  $operator:       #f92672;
+  $background:     #49483e;
+
+  color: $name;
+  background-color: $background;
+  @extend %vertical-rhythm;
+
+  .highlighter-rouge & {
+    background-color: $background;
+  }
+
+  .c { color: $comment } // Comment
+  .err { color: $name } // Error
+  .k { color: $keyword } // Keyword
+  .l { color: $literal-number } // Literal
+  .n { color: $name } // Name
+  .o { color: $operator } // Operator
+  .p { color: $name } // Punctuation
+  .cm { color: $comment } // Comment.Multiline
+  .cp { color: $comment } // Comment.Preproc
+  .c1 { color: $comment } // Comment.Single
+  .cs { color: $comment } // Comment.Special
+  .ge { font-style: italic } // Generic.Emph
+  .gs { font-weight: bold } // Generic.Strong
+  .kc { color: $keyword } // Keyword.Constant
+  .kd { color: $keyword } // Keyword.Declaration
+  .kn { color: $keyword } // Keyword.Namespace
+  .kp { color: $keyword } // Keyword.Pseudo
+  .kr { color: $keyword } // Keyword.Reserved
+  .kt { color: $keyword } // Keyword.Type
+  .ld { color: $literal-string } // Literal.Date
+  .m { color: $literal-number } // Literal.Number
+  .s { color: $literal-string } // Literal.String
+  .na { color: $name-class } // Name.Attribute
+  .nb { color: $name } // Name.Builtin
+  .nc { color: $name-class } // Name.Class
+  .no { color: $keyword } // Name.Constant
+  .nd { color: $name-class } // Name.Decorator
+  .ni { color: $name } // Name.Entity
+  .ne { color: $name-class } // Name.Exception
+  .nf { color: $name-class } // Name.Function
+  .nl { color: $name } // Name.Label
+  .nn { color: $name } // Name.Namespace
+  .nx { color: $name-class } // Name.Other
+  .py { color: $name } // Name.Property
+  .nt { color: $operator } // Name.Tag
+  .nv { color: $name } // Name.Variable
+  .ow { color: $operator } // Operator.Word
+  .w { color: $name } // Text.Whitespace
+  .mf { color: $literal-number } // Literal.Number.Float
+  .mh { color: $literal-number } // Literal.Number.Hex
+  .mi { color: $literal-number } // Literal.Number.Integer
+  .mo { color: $literal-number } // Literal.Number.Oct
+  .sb { color: $literal-string } // Literal.String.Backtick
+  .sc { color: $literal-string } // Literal.String.Char
+  .sd { color: $literal-string } // Literal.String.Doc
+  .s2 { color: $literal-string } // Literal.String.Double
+  .se { color: $literal-number } // Literal.String.Escape
+  .sh { color: $literal-string } // Literal.String.Heredoc
+  .si { color: $literal-string } // Literal.String.Interpol
+  .sx { color: $literal-string } // Literal.String.Other
+  .sr { color: $literal-string } // Literal.String.Regex
+  .s1 { color: $literal-string } // Literal.String.Single
+  .ss { color: $literal-string } // Literal.String.Symbol
+  .bp { color: $name } // Name.Builtin.Pseudo
+  .vc { color: $name } // Name.Variable.Class
+  .vg { color: $name } // Name.Variable.Global
+  .vi { color: $name } // Name.Variable.Instance
+  .il { color: $literal-number } // Literal.Number.Integer.Long
+  
+  .gh { } // Generic Heading & Diff Header
+  .gu { color: $comment; } // Generic.Subheading & Diff Unified/Comment?
+  .gd { color: $operator; } // Generic.Deleted & Diff Deleted
+  .gi { color: $name-class; } // Generic.Inserted & Diff Inserted
+}
+// vim: set sts=2 ts=8 sw=2 tw=0 expandtab:

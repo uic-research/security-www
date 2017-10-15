@@ -1,0 +1,74 @@
+/**
+ * Sections
+ */
+article, header, section {
+    display: block;
+    &:not(:last-child) {
+        border-bottom: $spacing-unit/4 solid $brand-color;
+        padding-bottom: $spacing-unit / 2;
+        margin-bottom: $spacing-unit / 2;
+    }
+}
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+/**
+ * Misc.
+ */
+ol.spaced, ul.spaced {
+	margin-left: 0em;
+
+    li {
+	list-style-type:none;
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+}
+// vim: set sw=4 sts=4 ts=8 expandtab:
