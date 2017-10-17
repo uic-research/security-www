@@ -1,5 +1,7 @@
 ---
 ---
+![Chicago Skyline](images/header.jpeg "Chicago Skyline")
+
 # {{ site.title }}
 
 Here's some fun information about the Security & Privacy group at UIC.
