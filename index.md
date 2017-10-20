@@ -1,6 +1,6 @@
 ---
 ---
-![Chicago Skyline](images/header.jpeg "Chicago Skyline")
+[![header]](images/header-full.jpg)
 
 # {{ site.title }}
 
@@ -38,6 +38,7 @@ Here's some fun information about the Security & Privacy group at UIC.
 - ...
 
 ## Recent Alumni
+- Arun Swarnam (M.S. 2017) → Applied Materials
 - ...
 
 ## Recent Publications
@@ -51,3 +52,6 @@ Here's some fun information about the Security & Privacy group at UIC.
 ![National Science Foundation](images/logo-nsf.gif "National Science Foundation")
 ![Defense Advanced Research Projects Agency](images/logo-darpa.gif "Defense
 Advanced Research Projects Agency")
+
+[header]: images/header.jpg "Chicago"
+{: width="100%"}
