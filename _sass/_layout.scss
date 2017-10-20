@@ -27,6 +27,22 @@ article, header, section {
     }
 }
 
+li {
+    list-style: none;
+}
+
+.thinlist {
+   @include media-query($md) {
+        columns: 3;
+    }
+}
+
+.thicklist {
+    @include media-query($md) {
+        columns: 2;
+    }
+}
+
 .post-content {
     h2 {
         font-size: 32px;

@@ -17,10 +17,12 @@ Here's some fun information about the Security & Privacy group at UIC.
 - [Cynthia Taylor](https://www.cs.uic.edu/~cynthiat/)
 - [V.N. Venkatakrishnan](https://www.cs.uic.edu/~venkat/)
 - [Lenore Zuck](https://www.cs.uic.edu/~lenore/)
+{:.thinlist}
 
 ## Postdocs
 - [Birhanu Eshete](https://www.cs.uic.edu/~beshete/)
 - [Rigel Gjomemo](http://securityigert.uic.edu/People/staff/Rigel)
+{:.thinlist}
 
 ## Ph.D. Students
 - Abeer Alhuzali
@@ -31,15 +33,15 @@ Here's some fun information about the Security & Privacy group at UIC.
 - Sadegh Momemi
 - Maliheh Monshizadeh
 - [Peter Snyder](https://www.cs.uic.edu/~psnyder/)
-- ...
+{:.thinlist}
 
 ## M.S. Students
 - Vijay Sai Prasanth Kommini
-- ...
+{:.thinlist}
 
 ## Recent Alumni
 - Arun Swarnam (M.S. 2017) → Applied Materials
-- ...
+{:.thicklist}
 
 ## Recent Publications
 {% assign yr = site.time | date: '%Y' | minus: 2 %}
