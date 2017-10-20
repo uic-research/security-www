@@ -39,12 +39,21 @@ Here's some fun information about the Security & Privacy group at UIC.
 - Vijay Sai Prasanth Kommini
 {:.thinlist}
 
+{% assign yr = site.time | date: '%Y' | minus: 2 %}
+
 ## Recent Alumni
-- Arun Swarnam (M.S. 2017) → Applied Materials
+{% assign years = site.data.alumni | where_exp: "alum", "alum.year >= yr" | group_by: "year" %}
+{% for year in years %}
+{% assign sorted = year.items | sort: "name" %}
+{% for alum in sorted %}
+- {{ alum.name }} ({{ alum.degree }} {{ alum.year }}){% if alum.job %} → {{ alum.job }}{% endif %}
+{% endfor %}
+{% endfor %}
 {:.thicklist}
 
+[[All Alumni]](alumni/)
+
 ## Recent Publications
-{% assign yr = site.time | date: '%Y' | minus: 2 %}
 {% bibliography --group_by none --query @*[year >= {{ yr }}] --max 16 %}
 {: .spaced }
 
