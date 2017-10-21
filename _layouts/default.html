@@ -5,7 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title | strip_html }}{% else %}{{ site.title | strip_html }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | xml_escape }}">
+  {% elsif page.description %}
+  <meta name="description" content="{{ page.description | xml_escape }}">
+  {% elsif page.url == "/" %}
+  {% if site.description %}
+  <meta name="description" content="{{ site.description | xml_escape }}">
+  {% endif %}
+  {% endif %}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   {% for css in page.css %}
     <link rel="stylesheet" href="{{ site.baseurl | append: "/css/" | append: css }}">
