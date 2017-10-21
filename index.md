@@ -49,7 +49,6 @@ Here's some fun information about the Security & Privacy group at UIC.
 - {{ alum.name }} ({{ alum.degree }} {{ alum.year }}){% if alum.job %} → {{ alum.job }}{% endif -%}
 {%- endfor -%}
 {% endfor %}
-{:.thicklist}
 
 [[All Alumni]](alumni/)
 
