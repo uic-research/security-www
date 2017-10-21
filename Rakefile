@@ -1,9 +1,12 @@
+require 'fileutils'
+
 task :default => :build
 
 desc 'Build the site'
 task :build do
   rake_running
-  jekyll('build --incremental')
+  jekyll('build' + incremental('development'))
+  update_timestamp('development')
 end
 
 # desc 'Deploy the site'
@@ -21,13 +24,15 @@ end
 desc 'Serve the site'
 task :serve do
   rake_running
-  jekyll('serve --incremental')
+  jekyll('serve' + incremental('development'))
+  update_timestamp('development')
 end
 
 desc 'Build the site for deployment'
 task :build_for_deploy do
   rake_running
-  jekyll('build --destination _deploy', 'deploy')
+  jekyll('build --destination _deploy' + incremental('deploy'), 'deploy')
+  update_timestamp('deploy')
 end
 
 desc 'Check the HTML output.'
@@ -48,6 +53,49 @@ task :check => :build_for_deploy do
     },
     :cache => { :timeframe => '1d' },
   }).run
+end
+
+def incremental?(env)
+  timestamp = '.' + env
+  if not File.exist?(timestamp)
+    return false
+  end
+  last_build = File.mtime(timestamp)
+  # Check _config.yml
+  if File.mtime('_config.yml') > last_build
+    return false
+  end
+  # Check Rakefile
+  if File.mtime('Rakefile') > last_build
+    return false
+  end
+  # Check for _data and any files inside _data
+  if not Dir.exist?('_data')
+    return true
+  end
+  if File.mtime('_data') > last_build
+    return false
+  end
+  Dir.foreach('_data/') do |file|
+    path = '_data/' + file
+    next unless File.file?(path)
+    if File.mtime(path) > last_build
+      return false
+    end
+  end
+  true
+end
+
+def incremental(env)
+  if incremental?(env)
+    ' --incremental'
+  else
+    ''
+  end
+end
+
+def update_timestamp(env)
+  FileUtils.touch('.' + env)
 end
 
 # Run a Jekyll command

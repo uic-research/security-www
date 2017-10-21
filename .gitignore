@@ -3,5 +3,7 @@ vendor
 _deploy
 _site
 .bundle
+.development
+.deploy
 .jekyll-metadata
 .sass-cache
