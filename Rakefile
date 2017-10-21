@@ -1,5 +1,7 @@
 require 'fileutils'
 
+hosting_dir = "../uic-research.github.io"
+
 task :default => :build
 
 desc 'Build the site'
@@ -8,10 +10,17 @@ task :build do
   jekyll('build')
 end
 
-# desc 'Deploy the site'
-# task :deploy => :build_for_deploy do
-#   sh "rsync -auvz --checksum --delete --rsh=ssh --progress _site/ bert:XXX"
-# end
+desc 'Deploy the site'
+task :deploy => :build_for_deploy do
+  unless Dir.exist?(hosting_dir)
+    fail "Did you forget to clone #{hosting_dir}?"
+  end
+  preserve = ['.git']
+  filters = preserve.map { |p| "--filter='P #{p}'" }.join(' ')
+  #sh "rsync -auvz --checksum --delete --rsh=ssh #{filters} --progress _deploy/ ../uic-research.github.io/"
+  sh "rsync -auz --delete --rsh=ssh #{filters} _deploy/ ../uic-research.github.io/"
+  sh "cd #{hosting_dir} && git add -A && git commit -m 'Update' && git push"
+end
 
 desc 'Clean the site'
 task :clean do
