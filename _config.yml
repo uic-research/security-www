@@ -30,6 +30,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+  - tmp
   - vendor
   - _deploy
 
