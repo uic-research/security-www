@@ -42,12 +42,12 @@ Here's some fun information about the Security & Privacy group at UIC.
 {% assign yr = site.time | date: '%Y' | minus: 2 %}
 
 ## Recent Alumni
-{% assign years = site.data.alumni | where_exp: "alum", "alum.year >= yr" | group_by: "year" %}
+{%- assign years = site.data.alumni | where_exp: "alum", "alum.year >= yr" | group_by: "year" -%}
 {% for year in years %}
-{% assign sorted = year.items | sort: "name" %}
+{%- assign sorted = year.items | sort: "name" -%}
 {% for alum in sorted %}
-- {{ alum.name }} ({{ alum.degree }} {{ alum.year }}){% if alum.job %} → {{ alum.job }}{% endif %}
-{% endfor %}
+- {{ alum.name }} ({{ alum.degree }} {{ alum.year }}){% if alum.job %} → {{ alum.job }}{% endif -%}
+{%- endfor -%}
 {% endfor %}
 {:.thicklist}
 
