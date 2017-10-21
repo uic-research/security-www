@@ -2,7 +2,7 @@
 ---
 [![header]](images/header-full.jpg)
 
-# {{ site.title }}
+# {{ site.title | xml_escape }}
 
 Here's some fun information about the Security & Privacy group at UIC.
 
