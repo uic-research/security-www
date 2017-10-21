@@ -1,5 +1,7 @@
 ---
-title: Alumni
+title: All Security and Privacy Alumni
+description: "A list of all of UIC's security & privacy alumni"
+permalink: /alumni/
 ---
 # {{ page.title }}
 
