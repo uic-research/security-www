@@ -11,7 +11,7 @@ task :build do
 end
 
 desc 'Deploy the site'
-task :deploy => :build_for_deploy do
+task :deploy => :check do
   unless Dir.exist?(hosting_dir)
     fail "Did you forget to clone #{hosting_dir}?"
   end
