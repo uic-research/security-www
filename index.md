@@ -4,7 +4,23 @@
 
 # {{ site.title | xml_escape }}
 
-Here's some fun information about the Security & Privacy group at UIC.
+The Security & Privacy group consists of researchers in the [Department of
+Computer Science](https://www.cs.uic.edu) at the [University of Illinois at
+Chicago](https://www.uic.edu). Our group performs research into a wide range
+of security and privacy topics including formal methods, theoretical and
+applied cryptography, web security and privacy, systems and network security,
+language-based security, computer security education, and computer security
+policy. We are affiliated with the [Systems & Internet Security
+Lab](https://sisl.rites.uic.edu), the [BITS
+Lab](https://www.cs.uic.edu/bin/view/Bits/WebHome), and the [Ethos
+Lab](https://www.ethos-os.org/).
+
+
+<nav class="menu" markdown="1">
+- [People](#faculty)
+- [Publications](#recent-publications)
+- [Sponsors](#sponsors)
+</nav>
 
 ## Faculty
 - [Daniel J. Bernstein](https://cr.yp.to/djb.html)
@@ -60,8 +76,7 @@ Here's some fun information about the Security & Privacy group at UIC.
 
 ## Sponsors
 ![National Science Foundation](images/logo-nsf.gif "National Science Foundation")
-![Defense Advanced Research Projects Agency](images/logo-darpa.gif "Defense
-Advanced Research Projects Agency")
+![Defense Advanced Research Projects Agency](images/logo-darpa.gif "Defense Advanced Research Projects Agency")
 
 [header]: images/header.jpg "Chicago"
 {: width="100%"}
