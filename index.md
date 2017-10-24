@@ -79,4 +79,3 @@ Lab](https://www.ethos-os.org/).
 ![Defense Advanced Research Projects Agency](images/logo-darpa.gif "Defense Advanced Research Projects Agency")
 
 [header]: images/header.jpg "Chicago"
-{: width="100%"}
