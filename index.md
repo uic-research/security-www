@@ -32,6 +32,7 @@ Lab](https://www.ethos-os.org/).
 - [Jon A. Solworth](https://www.ethos-os.org/~solworth/)
 - [Cynthia Taylor](https://www.cs.uic.edu/~cynthiat/)
 - [V.N. Venkatakrishnan](https://www.cs.uic.edu/~venkat/)
+- [Elena Zheleva](https://www.cs.uic.edu/~elena/)
 - [Lenore Zuck](https://www.cs.uic.edu/~lenore/)
 {:.thinlist}
 
